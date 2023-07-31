@@ -2,6 +2,7 @@
 
 import mongoose from "mongoose";
 // import mongo_url from "dotenv"
+
 const MONGO_URL = process.env.MONGO_URL;
 
 if (!MONGO_URL) {
@@ -16,6 +17,7 @@ if (!MONGO_URL) {
  */
 
 let cached = global.mongoose;
+console.log(cached, `cachedjjjjjjjjjjjjjjjjjj`);
 
 if (!cached) {
   cached = global.mongoose = { conn: null, promise: null };
@@ -32,7 +34,7 @@ async function dbConnect() {
     };
   }
 
-  cached.promise = mongoose.connect(MONGO_URL, opts).then(mongoose => {
+  cached.promise = mongoose.connect(MONGO_URL, opts).then((mongoose) => {
     return mongoose;
   });
 

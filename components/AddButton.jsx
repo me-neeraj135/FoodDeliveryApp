@@ -1,4 +1,4 @@
-import styles from "../styles/Add.module.css";
+import styles from "../style/AddButton.module.css";
 
 const AddButton = ({ setClose }) => {
   return (

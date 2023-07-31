@@ -1,4 +1,4 @@
-import styles from "../styles/Featured.module.css";
+import styles from "../style/Featured.module.css";
 import Image from "next/image";
 import { useState } from "react";
 
